@@ -13,9 +13,7 @@ MaterialIcons.loadFont();
 
 const SearchBarComponent = () => {
   const dispatch = useDispatch();
-  const {termsHistory, searchTerm, page} = useSelector(
-    state => state.SearchReducer,
-  );
+  const {termsHistory, searchTerm} = useSelector(state => state.SearchReducer);
   const [startSearch, setStartSearch] = useState(false);
 
   useEffect(() => {
@@ -90,6 +88,7 @@ const SearchBarComponent = () => {
           setStartSearch(true);
         }}
         blurOnSubmit={true}
+        testID="input"
       />
       {startSearch ? (
         <ViewTermsHistory>

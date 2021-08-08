@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardTermHistory component CardTermHistory snapshot test 1`] = `
+<View
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#F0F0F0",
+      "height": 40,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingLeft": 10,
+      "width": "90%",
+      "zIndex": 7,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#000000",
+        "fontSize": 30,
+      }
+    }
+  >
+    Test
+  </Text>
+</View>
+`;

@@ -40,14 +40,3 @@ const styles = StyleSheet.create({
     padding: 3,
   },
 });
-const teste = {
-  farm: 66,
-  id: '51363135656',
-  isfamily: 0,
-  isfriend: 0,
-  ispublic: 1,
-  owner: '93689361@N05',
-  secret: 'bde9e49306',
-  server: '65535',
-  title: '1F5E6D1F-70E8-4944-AFB1-6589C0AC0A3C',
-};
