@@ -6,7 +6,7 @@ This is an app to search images on flickr with terms.
 
 - Clone the repository.
 
-- Get an api key [flickr](https://www.flickr.com/services/api/misc.api_keys.html).
+- Get an api key on [flickr](https://www.flickr.com/services/api/misc.api_keys.html).
 
 - Create a file called .env and inform your keys in the following format:
 
