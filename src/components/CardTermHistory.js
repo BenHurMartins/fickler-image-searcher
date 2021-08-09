@@ -1,13 +1,11 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import {Colors, Mixins} from '../styles';
 
 const CardTermHistory = ({term, onPress}) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      onPress={() => onPress(term)}
-      hitSlop={{top: 5, bottom: 5, left: 5, right: 5}}>
+    <TouchableOpacity style={styles.container} onPress={() => onPress(term)}>
       <Text style={styles.term}>{term}</Text>
     </TouchableOpacity>
   );
@@ -17,7 +15,7 @@ export default CardTermHistory;
 
 const styles = StyleSheet.create({
   container: {
-    width: '90%',
+    width: Mixins.DEVICE_WIDTH_90,
     justifyContent: 'center',
     backgroundColor: Colors.OFF_WHITE,
     paddingLeft: 10,

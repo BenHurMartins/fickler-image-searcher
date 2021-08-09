@@ -6,6 +6,7 @@ import FlatListComponent from './FlatListComponent';
 import Button from './Button';
 import ListItem from './ListItem';
 import ImageOverlay from './ImageOverlay';
+import LoadingIndicatorComponent from './LoadingIndicatorComponent';
 
 export {
   ViewContainer,
@@ -16,4 +17,5 @@ export {
   FlatListComponent,
   ListItem,
   ImageOverlay,
+  LoadingIndicatorComponent,
 };

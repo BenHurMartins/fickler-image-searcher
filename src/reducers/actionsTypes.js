@@ -4,3 +4,4 @@ export const ADD_PAGE = 'add-page';
 export const RESET_PAGE = 'reset-page';
 export const SET_IMAGES = 'set_images';
 export const ADD_IMAGES = 'add_images';
+export const SET_LOADING = 'set_loading';

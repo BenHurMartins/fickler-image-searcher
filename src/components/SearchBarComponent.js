@@ -18,13 +18,20 @@ const SearchBarComponent = () => {
 
   const searchImages = () => {
     // Always when a search starts here we will define the page as 1
-    setStartSearch(false);
     if (searchTerm.trim().length > 2) {
+      setStartSearch(false);
+      dispatch({type: types.SET_LOADING, payload: true});
       dispatch({type: types.RESET_PAGE});
       storeTerms(searchTerm.trim());
-      getImages(searchTerm.trim(), 1).then(images => {
-        dispatch({type: types.SET_IMAGES, payload: images});
-      });
+      getImages(searchTerm.trim(), 1)
+        .then(images => {
+          setStartSearch(false);
+          dispatch({type: types.SET_LOADING, payload: false});
+          dispatch({type: types.SET_IMAGES, payload: images});
+        })
+        .catch(err => {
+          dispatch({type: types.SET_LOADING, payload: false});
+        });
     }
   };
 

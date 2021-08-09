@@ -5,6 +5,7 @@ const INITIAL_STATE = {
   searchTerm: '',
   page: 1,
   images: [],
+  loading: false,
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -22,6 +23,9 @@ export default (state = INITIAL_STATE, action) => {
     }
     case types.SET_IMAGES: {
       return {...state, images: action.payload};
+    }
+    case types.SET_LOADING: {
+      return {...state, loading: action.payload};
     }
     case types.ADD_IMAGES: {
       let newImages = state.images;
