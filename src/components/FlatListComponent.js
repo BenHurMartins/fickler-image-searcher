@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
     width: Mixins.DEVICE_WIDTH,
     alignItems: 'center',
     justifyContent: 'space-around',
+    zIndex: 1,
   },
 });

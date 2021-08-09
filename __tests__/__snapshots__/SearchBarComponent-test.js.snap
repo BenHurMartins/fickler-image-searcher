@@ -7,7 +7,7 @@ exports[`SearchBarComponent component SearchBarComponent snapshot test 1`] = `
       "alignItems": "center",
       "flexDirection": "row",
       "justifyContent": "center",
-      "zIndex": 1,
+      "zIndex": 2,
     }
   }
 >

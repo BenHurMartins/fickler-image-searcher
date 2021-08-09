@@ -7,6 +7,7 @@ exports[`FlatListComponent component FlatListComponent snapshot test 1`] = `
       "alignItems": "center",
       "justifyContent": "space-around",
       "width": 750,
+      "zIndex": 1,
     }
   }
   data={

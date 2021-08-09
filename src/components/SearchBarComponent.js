@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {SearchBar} from 'react-native-elements';
 import {Colors} from '../styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {Button, ViewTermsHistory, CardTermHistory} from '../components';
+import {Button, ViewTermsHistory} from '../components';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSelector, useDispatch} from 'react-redux';
 import * as types from '../reducers/actionsTypes';
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     color: Colors.BLACK,
   },
   viewContainer: {
-    zIndex: 1,
+    zIndex: 2,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',

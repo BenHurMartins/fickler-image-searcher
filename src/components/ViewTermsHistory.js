@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {View, StyleSheet} from 'react-native';
 import {Mixins} from '../styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {Button, CardTermHistory} from '../components';
+import {CardTermHistory} from '../components';
 import {useSelector, useDispatch} from 'react-redux';
 import * as types from '../reducers/actionsTypes';
 

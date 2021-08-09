@@ -20,7 +20,7 @@ exports[`rendering test for Home.js Home snapshot test 1`] = `
         "alignItems": "center",
         "flexDirection": "row",
         "justifyContent": "center",
-        "zIndex": 1,
+        "zIndex": 2,
       }
     }
   >
@@ -275,6 +275,7 @@ exports[`rendering test for Home.js Home snapshot test 1`] = `
         "alignItems": "center",
         "justifyContent": "space-around",
         "width": 750,
+        "zIndex": 1,
       }
     }
     data={

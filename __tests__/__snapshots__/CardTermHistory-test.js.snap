@@ -4,6 +4,14 @@ exports[`CardTermHistory component CardTermHistory snapshot test 1`] = `
 <View
   accessible={true}
   focusable={true}
+  hitSlop={
+    Object {
+      "bottom": 5,
+      "left": 5,
+      "right": 5,
+      "top": 5,
+    }
+  }
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -19,7 +27,7 @@ exports[`CardTermHistory component CardTermHistory snapshot test 1`] = `
       "opacity": 1,
       "paddingLeft": 10,
       "width": "90%",
-      "zIndex": 7,
+      "zIndex": 9999,
     }
   }
 >
