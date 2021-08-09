@@ -16,11 +16,6 @@ const SearchBarComponent = () => {
   const {termsHistory, searchTerm} = useSelector(state => state.SearchReducer);
   const [startSearch, setStartSearch] = useState(false);
 
-  useEffect(() => {
-    //Rise the history of terms searched
-    getTermsHistory();
-  }, []);
-
   const searchImages = () => {
     // Always when a search starts here we will define the page as 1
     setStartSearch(false);
@@ -30,17 +25,6 @@ const SearchBarComponent = () => {
       getImages(searchTerm.trim(), 1).then(images => {
         dispatch({type: types.SET_IMAGES, payload: images});
       });
-    }
-  };
-
-  const getTermsHistory = async () => {
-    //This section get the stored terms in the users phone
-    try {
-      let terms = await AsyncStorage.getItem('terms-history');
-      terms = terms != null ? JSON.parse(terms) : [];
-      dispatch({type: types.SET_TERMS, payload: terms});
-    } catch (e) {
-      console.log(e);
     }
   };
 
@@ -57,21 +41,13 @@ const SearchBarComponent = () => {
         await AsyncStorage.setItem('terms-history', jsonValue);
       }
     } catch (e) {
-      // saving error
+      console.log(e);
     }
   };
 
   setSearchTerm = term => {
     setStartSearch(true);
     dispatch({type: types.SET_SEARCH_TERM, payload: term});
-  };
-
-  const getHintterms = () => {
-    //Filter all the terms with the term already used as a search
-    let result = termsHistory.filter(str => str.includes(searchTerm)).reverse();
-    //Cut the array to show only the 5 newest terms
-    result.length = 5;
-    return result;
   };
 
   return (
@@ -90,13 +66,7 @@ const SearchBarComponent = () => {
         blurOnSubmit={true}
         testID="input"
       />
-      {startSearch ? (
-        <ViewTermsHistory>
-          {getHintterms().map(element => (
-            <CardTermHistory term={element} onPress={setSearchTerm} />
-          ))}
-        </ViewTermsHistory>
-      ) : null}
+      {startSearch ? <ViewTermsHistory setSearchTerm={setSearchTerm} /> : null}
       <Button
         title={'Go'}
         onPress={searchImages}
